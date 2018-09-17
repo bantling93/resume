@@ -14,6 +14,11 @@ article {
 section {
   margin: 1em;
   padding: 1em;
+  border-bottom: 2px solid black;
+}
+
+section:last-child {
+  border-bottom: none;
 }
 
 header,
@@ -27,6 +32,8 @@ header {
   text-align: center;
   background-image: url(img/bg.jpg);
   color: white;
+  background-position: fixed;
+
 }
 
 header section {
@@ -50,15 +57,36 @@ h1 {
 
 }
 
+h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 main {
   max-width: 1140px;
 }
 
-.course {}
+.course {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-.course .title {}
+.course .title {
+  flex: 0 0 33.3%;
+  max-width: 33%;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #509e98;
+}
 
-.course .descrition {}
+.course .descrition {
+  flex: 0 0 66.6%;
+  max-width: 66.6%;
+}
+
+.course .descrition p {
+  padding-left: 1em;
+}
 
 .school span {
   color: #A7B8BF;
